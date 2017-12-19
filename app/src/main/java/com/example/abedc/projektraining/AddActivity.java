@@ -24,12 +24,15 @@ public class AddActivity extends AppCompatActivity {
         publish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DetailApps detailApps = new DetailApps();
-                detailApps.name[detailApps.counter] = title.getText().toString();
-                detailApps.desc [detailApps.counter]= desc.getText().toString();
-                detailApps.creator[detailApps.counter] = creator.getText().toString();
-                detailApps.link[detailApps.counter] = link.getText().toString();
-                detailApps.counter++;
+//                DetailApps detailApps = new DetailApps();
+//                detailApps.name[detailApps.counter] = title.getText().toString();
+//                detailApps.desc [detailApps.counter]= desc.getText().toString();
+//                detailApps.creator[detailApps.counter] = creator.getText().toString();
+//                detailApps.link[detailApps.counter] = link.getText().toString();
+//                detailApps.counter++;
+
+                MainActivity.appList.add(new AppModel("name", "desc", "link", "creator"));
+
                 startActivity(new Intent(AddActivity.this,MainActivity.class));
             }
         });

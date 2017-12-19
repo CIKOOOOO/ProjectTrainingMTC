@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1078210454959",
+    "firebase_url": "https://matclub-6aa31.firebaseio.com",
+    "project_id": "matclub-6aa31",
+    "storage_bucket": "matclub-6aa31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078210454959:android:80280e68df453f66",
+        "android_client_info": {
+          "package_name": "com.example.abedc.projektraining"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078210454959-t4jnavij9p8rv0gtmpbgldgckagn8h1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSiTeAPs0CWrsR1RzxWoSsMJUettSv3IE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

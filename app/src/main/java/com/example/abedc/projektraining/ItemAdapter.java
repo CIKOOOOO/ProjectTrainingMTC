@@ -20,6 +20,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     List<String> desc = new ArrayList<>();
     List<String> link = new ArrayList<>();
     List<String> creator = new ArrayList<>();
+
+    List<AppModel> appList = new ArrayList<>();
     Context context;
 
     public ItemAdapter(List<String> name, List<String> desc,List<String> link,List<String> creator, Context context){

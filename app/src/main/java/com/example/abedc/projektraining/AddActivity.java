@@ -49,7 +49,6 @@ public class AddActivity extends AppCompatActivity {
                         } else finish();
                     }
                 });
-
             }
         });
 

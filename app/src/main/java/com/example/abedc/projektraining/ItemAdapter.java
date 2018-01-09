@@ -17,7 +17,9 @@ import java.util.List;
  */
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
+
     List<AppModel> appModels = new ArrayList<>();
+
     Context context;
 
     public ItemAdapter(List<AppModel> listModel, Context context) {

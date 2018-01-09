@@ -1,5 +1,6 @@
 {
   "project_info": {
+
     "project_number": "509911813488",
     "firebase_url": "https://project-training-mtc.firebaseio.com",
     "project_id": "project-training-mtc",
@@ -8,6 +9,7 @@
   "client": [
     {
       "client_info": {
+
         "mobilesdk_app_id": "1:509911813488:android:80280e68df453f66",
         "android_client_info": {
           "package_name": "com.example.abedc.projektraining"
@@ -15,6 +17,7 @@
       },
       "oauth_client": [
         {
+
           "client_id": "509911813488-ubelrns5s77bjld9jdbdt1hqed5cp1e8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -29,6 +32,7 @@
       ],
       "api_key": [
         {
+
           "current_key": "AIzaSyC-QMYFsjCdKlKeNAZI_yWfdP01J-Q30pU"
         }
       ],
@@ -37,6 +41,7 @@
           "status": 1
         },
         "appinvite_service": {
+
           "status": 2,
           "other_platform_oauth_client": [
             {

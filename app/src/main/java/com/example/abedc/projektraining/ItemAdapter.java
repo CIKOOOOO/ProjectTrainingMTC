@@ -2,6 +2,7 @@ package com.example.abedc.projektraining;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,17 +17,11 @@ import java.util.List;
  */
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
-    List<String> name = new ArrayList<>();
-    List<String> desc = new ArrayList<>();
-    List<String> link = new ArrayList<>();
-    List<String> creator = new ArrayList<>();
+    List<AppModel> appModels = new ArrayList<>();
     Context context;
 
-    public ItemAdapter(List<String> name, List<String> desc,List<String> link,List<String> creator, Context context){
-        this.name = name;
-        this.desc = desc;
-        this.link = link;
-        this.creator = creator;
+    public ItemAdapter(List<AppModel> listModel, Context context) {
+        appModels = listModel;
         this.context = context;
     }
 
@@ -38,17 +33,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
-        holder.bind(name.get(position), desc.get(position));
+        holder.bind(appModels.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return name.size();
+        return appModels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvName, tvDesc;
         private Button btnPlayStore;
+
         public ViewHolder(View itemView) {
             super(itemView);
             btnPlayStore = (Button) itemView.findViewById(R.id.btnPlayStore_ListView);
@@ -56,13 +52,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             tvDesc = (TextView) itemView.findViewById(R.id.tvDeskripsiSingkat_ListView);
 
         }
-        public void bind(String name, String desc){
-            tvName.setText(name);
-            tvDesc.setText(desc);
+
+        public void bind(final AppModel appModel) {
+            tvName.setText(appModel.name);
+            tvDesc.setText(appModel.desc);
             btnPlayStore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    context.startActivity(new Intent(context,DetailActivity.class)); // itu nanti kasih linknya
+                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(appModel.link))); // itu nanti kasih linknya
                 }
             });
         }
